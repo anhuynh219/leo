@@ -1,0 +1,14 @@
+analyze_and_summarize_information_task:
+  description: >
+    Review and analyze all the research findings collected about {topic}. Extract key insights, identify main themes, and organize the information into a clear, logical structure. Create a comprehensive summary that highlights the most important points and findings.
+
+  expected_output: >
+    A well-organized analysis document containing:
+    - Executive summary of key findings
+    - Main themes and insights identified
+    - Critical analysis of the information
+    - Structured outline for the final report
+    - Key recommendations or conclusions
+    - Prioritized information hierarchy for report writing
+
+  agent: content_analyst_agent

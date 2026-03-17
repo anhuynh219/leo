@@ -1,0 +1,13 @@
+research_topic_task:
+  description: >
+    Conduct comprehensive internet research on the topic: {topic}. Search for the latest information, trends, statistics, key facts, and multiple perspectives on this subject. Gather information from various credible sources to ensure a well-rounded understanding.
+  expected_output: >
+    A detailed research summary containing:
+    - Key facts and latest information about {topic}
+    - Current trends and developments
+    - Important statistics and data points
+    - Multiple perspectives and expert opinions
+    - List of credible sources used
+    - Organized findings ready for analysis
+
+  agent: research_specialist_agent

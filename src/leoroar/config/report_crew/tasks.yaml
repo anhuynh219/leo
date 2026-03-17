@@ -1,0 +1,17 @@
+create_google_docs_report_task:
+  description: >
+    Using the research and analysis provided, create a comprehensive, professional report about {topic} and publish it to Google Docs. The report should be well-formatted, include proper headings, bullet points, and have a clear structure that makes the information easily digestible.
+
+  expected_output: >
+    A professionally formatted Google Docs report containing:
+    - Title: "Research Report: {topic}"
+    - Executive Summary
+    - Introduction
+    - Main Content Sections with detailed findings
+    - Key Insights and Trends
+    - Conclusions and Recommendations
+    - Sources and References
+    - Professional formatting with headings, bullet points, and clear organization
+    - The Google Docs link for easy access
+
+  agent: report_writer_agent

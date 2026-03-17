@@ -1,0 +1,47 @@
+research_topic_task:
+  description: >
+    Conduct comprehensive internet research on the topic: {topic}. Search for the latest information, trends, statistics, key facts, and multiple perspectives on this subject. Gather information from various credible sources to ensure a well-rounded understanding.
+  expected_output: >
+    A detailed research summary containing:
+    - Key facts and latest information about {topic}
+    - Current trends and developments
+    - Important statistics and data points
+    - Multiple perspectives and expert opinions
+    - List of credible sources used
+    - Organized findings ready for analysis
+
+  agent: research_specialist_agent
+
+analyze_and_summarize_information_task:
+  description: >
+    Review and analyze all the research findings collected about {topic}. Extract key insights, identify main themes, and organize the information into a clear, logical structure. Create a comprehensive summary that highlights the most important points and findings.
+
+  expected_output: >
+    A well-organized analysis document containing:
+    - Executive summary of key findings
+    - Main themes and insights identified
+    - Critical analysis of the information
+    - Structured outline for the final report
+    - Key recommendations or conclusions
+    - Prioritized information hierarchy for report writing
+
+  agent: content_analyst_agent
+
+create_google_docs_report_task:
+  description: >
+    Using the research and analysis provided, create a comprehensive, professional report about {topic} and publish it to Google Docs. The report should be well-formatted, include proper headings, bullet points, and have a clear structure that makes the information easily digestible.
+
+  expected_output: >
+    A professionally formatted Google Docs report containing:
+    - Title: "Research Report: {topic}"
+    - Executive Summary
+    - Introduction
+    - Main Content Sections with detailed findings
+    - Key Insights and Trends
+    - Conclusions and Recommendations
+    - Sources and References
+    - Professional formatting with headings, bullet points, and clear organization
+    - The Google Docs link for easy access
+
+  agent: report_writer_agent
+
