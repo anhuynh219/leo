@@ -11,3 +11,17 @@ research_topic_task:
     - Organized findings ready for analysis
 
   agent: research_specialist_agent
+
+research_technical_requirements_task:
+  description: >
+    Conduct comprehensive research on {project_name} to gather information needed for creating a System Requirement Specification. Research should include:
+    - Industry standards and regulations applicable to {project_type}
+    - Similar systems and their requirements
+    - Technical constraints and limitations
+    - Performance benchmarks and best practices
+    - Security and compliance requirements
+    - Integration requirements with existing systems
+  expected_output: >
+    A comprehensive research report containing all technical information, standards, benchmarks, and requirements needed to create a detailed SRS document. The report should include references to authoritative sources and industry standards.
+  agent: research_specialist_agent
+

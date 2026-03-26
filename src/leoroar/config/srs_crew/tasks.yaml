@@ -1,0 +1,61 @@
+define_foundation_task:
+  description: >
+    1. Perform a deep analysis of the user requirements from the prompt: '{prompt}'.
+    2. Identify the core vision and define the project scope.
+    3. Extract the list of technical entities including: Actors (users), Actions (primary operations), and Constraints (system limitations or rules).
+    4. Draft an initial set of Functional and Non-functional requirements.
+    5. Important: Do not introduce or assume requirements that are not explicitly present in the prompt.
+  expected_output: >
+    A complete SRSReport object containing a Markdown-formatted report along with structured metadata that includes the lists of Actors, Actions, and Constraints.
+
+  agent: discovery_and_drafting_agent
+
+map_system_logic_task:
+  description: >
+    1. Perform a deep analysis of the user requirements from the prompt: '{prompt}'.
+    2. Identify the core vision and define the project scope.
+    3. Extract the list of technical entities including: Actors (users), Actions (primary operations), and Constraints (system limitations or rules).
+    4. Draft an initial set of Functional and Non-functional requirements.
+    5. Important: Do not introduce or assume requirements that are not explicitly present in the prompt.
+  expected_output: >
+    A complete SRSReport object containing a Markdown-formatted report along with structured metadata that includes the lists of Actors, Actions, and Constraints.
+
+  agent: logic_engineer_agent
+
+
+design_tech_structure_task:
+  description: >
+    1. Perform a deep analysis of the user requirements from the prompt: '{prompt}'.
+    2. Identify the core vision and define the project scope.
+    3. Extract the list of technical entities including: Actors (users), Actions (primary operations), and Constraints (system limitations or rules).
+    4. Draft an initial set of Functional and Non-functional requirements.
+    5. Important: Do not introduce or assume requirements that are not explicitly present in the prompt.
+  expected_output: >
+    A complete SRSReport object containing a Markdown-formatted report along with structured metadata that includes the lists of Actors, Actions, and Constraints.
+
+  agent: tech_architect_agent
+
+
+audit_and_nfrs_task:
+  description: >
+    1. Perform a deep analysis of the user requirements from the prompt: '{prompt}'.
+    2. Identify the core vision and define the project scope.
+    3. Extract the list of technical entities including: Actors (users), Actions (primary operations), and Constraints (system limitations or rules).
+    4. Draft an initial set of Functional and Non-functional requirements.
+    5. Important: Do not introduce or assume requirements that are not explicitly present in the prompt.
+  expected_output: >
+    A complete SRSReport object containing a Markdown-formatted report along with structured metadata that includes the lists of Actors, Actions, and Constraints.
+
+  agent: quality_auditor_agent
+
+final_assembly_task:
+  description: >
+    1. Perform a deep analysis of the user requirements from the prompt: '{prompt}'.
+    2. Identify the core vision and define the project scope.
+    3. Extract the list of technical entities including: Actors (users), Actions (primary operations), and Constraints (system limitations or rules).
+    4. Draft an initial set of Functional and Non-functional requirements.
+    5. Important: Do not introduce or assume requirements that are not explicitly present in the prompt.
+  expected_output: >
+    A complete SRSReport object containing a Markdown-formatted report along with structured metadata that includes the lists of Actors, Actions, and Constraints.
+
+  agent: quality_auditor_agent

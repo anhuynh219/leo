@@ -1,10 +1,49 @@
 from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
 from crewai.agents.agent_builder.base_agent import BaseAgent
+from leoroar.tools.write_tool import WriteTool
+from leoroar.models.srs.requirements import SRSReport
 
 # If you want to run a snippet of code before or after the crew starts,
 # you can use the @before_kickoff and @after_kickoff decorators
 # https://docs.crewai.com/concepts/crews#example-crew-class-with-decorators
+
+
+@CrewBase
+class SRS_Crew:
+    """SRS Crew"""
+
+    agents_config = "config/srs_crew/agents.yaml"
+    tasks_config = "config/srs_crew/tasks.yaml"
+
+    agents: list[BaseAgent]
+    tasks: list[Task]
+
+    @agent
+    def discovery_and_drafting_agent(self) -> Agent:
+        return Agent(
+            config=self.agents_config["discovery_and_drafting_agent"],  # type: ignore[index]
+            verbose=True,
+            tools=[WriteTool()],
+        )
+
+    @task
+    def define_foundation_task(self) -> Task:
+        return Task(
+            config=self.tasks_config["define_foundation_task"],  # type: ignore[index]
+            agent=self.discovery_and_drafting_agent(),
+            human_input=True,
+            output_pydantic_model=SRSReport,
+        )
+
+    @crew
+    def crew(self) -> Crew:
+        return Crew(
+            agents=self.agents,
+            tasks=self.tasks,
+            process=Process.sequential,
+            verbose=True,
+        )
 
 
 @CrewBase
@@ -40,6 +79,7 @@ class ResearchCrew:
             process=Process.sequential,
             verbose=True,
         )
+
 
 @CrewBase
 class AnalysisCrew:
@@ -85,7 +125,7 @@ class ReportCrew:
     agents: list[BaseAgent]
     tasks: list[Task]
 
-    @agent  
+    @agent
     def report_writer_agent(self) -> Agent:
         return Agent(
             config=self.agents_config["report_writer_agent"],  # type: ignore[index]
